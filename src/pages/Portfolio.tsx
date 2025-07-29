@@ -9,25 +9,7 @@ import { useState, useRef, useEffect } from 'react';
 import FloatingIcons from '@/components/FloatingIcons';
 import emailjs from '@emailjs/browser';
 import { initEmailJS, EMAILJS_CONFIG } from '@/lib/emailjs';
-
-// Define image URLs
-const IMAGES = {
-  python: '/python.png',
-  java: '/java.png',
-  machine: '/machine.png',
-  html: '/html.png',
-  css: '/css.png',
-  android: '/android.png',
-  c: '/c.png',
-  kali: '/kali.png',
-  football: '/football.jpg',
-  mouse: '/mouse.jpg',
-  web: '/web.webp',
-  tools: '/tools.webp',
-  portfolio: '/portfolio.jpg',
-  employee: '/employee.png',
-  profile: '/gokul.jpg'
-} as const;
+import { Images } from '@/lib/images';
 
 const Portfolio = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -182,21 +164,21 @@ const Portfolio = () => {
   };
 
   const skills = [
-    { name: 'Python', icon: IMAGES.python, level: 85 },
-    { name: 'Java', icon: IMAGES.java, level: 69 },
-    { name: 'Machine Learning', icon: IMAGES.machine, level: 75 },
-    { name: 'HTML', icon: IMAGES.html, level: 95 },
-    { name: 'CSS', icon: IMAGES.css, level: 92 },
-    { name: 'Android Studio', icon: IMAGES.android, level: 80 },
-    { name: 'C', icon: IMAGES.c, level: 70 },
-    { name: 'Kali Linux', icon: IMAGES.kali, level: 90 }
+    { name: 'Python', icon: Images.skills.python, level: 85 },
+    { name: 'Java', icon: Images.skills.java, level: 69 },
+    { name: 'Machine Learning', icon: Images.skills.machine, level: 75 },
+    { name: 'HTML', icon: Images.skills.html, level: 95 },
+    { name: 'CSS', icon: Images.skills.css, level: 92 },
+    { name: 'Android Studio', icon: Images.skills.android, level: 80 },
+    { name: 'C', icon: Images.skills.c, level: 70 },
+    { name: 'Kali Linux', icon: Images.skills.kali, level: 90 }
   ];
 
   const projects = [
     {
       title: 'Football Analytics Platform⚽',
       description: 'Built an AI platform leveraging ML and real-time data to analyze and predict football team performance.',
-      image: IMAGES.football,
+      image: Images.projects.football,
       tech: ['Python', 'Streamlit', 'OpenCV', 'YOLOv8'],
       github: 'https://github.com/gokul-s05/football_analysis.git',
       demo: 'https://demo.com'
@@ -204,21 +186,21 @@ const Portfolio = () => {
     {
       title: 'virtual Mouse🖱️',
       description: 'Created a gesture-controlled virtual mouse using OpenCV for touchless cursor control via real-time hand tracking.',
-      image: IMAGES.mouse,
+      image: Images.projects.mouse,
       tech: ['OpenCV', 'MediaPipe', 'Python','PyAutoGUI'],
       github: 'https://github.com/gokul-s05/virtual_mouse.git',
     },
     {
       title: 'Profile 360👤',
       description: 'Built an Android app in Java for managing member profiles with image support and intuitive user interface.',
-      image: IMAGES.web,
+      image: Images.projects.web,
       tech: ['Java', 'XML', 'Java for API','Firebase'],
       github: 'https://github.com/gokul-s05/profile360.git',
     },
     {
       title: 'Cyber Security Tools🔒',
       description: 'Developed cybersecurity tools including Caesar cipher, pixel-based image encryption, keylogger, and password strength checker for enhanced data protection.',
-      image: IMAGES.tools,
+      image: Images.projects.tools,
       tech: ['Python', 'Git','Tkinter'],
       github: 'https://github.com/gokul-s05/Intern_Project.git',
       demo: 'https://cyber-security-tools.streamlit.app/'
@@ -226,7 +208,7 @@ const Portfolio = () => {
     {
       title: 'Portfolio Website🌐',
       description: 'Modern portfolio website with smooth animations and responsive design.',
-      image: IMAGES.portfolio,
+      image: Images.projects.portfolio,
       tech: ['React', 'Framer Motion', 'Tailwind CSS'],
       github: 'https://github.com/gokul-s05/portfolio.git',
       demo: 'https://vercel-gokul-s05.vercel.app/'
@@ -234,7 +216,7 @@ const Portfolio = () => {
     {
       title: 'Employee Management System👥',
       description: 'Developed a Java-based employee management system with MySQL database integration.',
-      image: IMAGES.employee,
+      image: Images.projects.employee,
       tech: ['Java', 'MySQL', 'JDBC', 'Swing'],
       github: 'https://github.com/gokul-s05/employee-management-system.git',
     }
@@ -417,7 +399,7 @@ const Portfolio = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <img
-                    src={IMAGES.profile}
+                    src={Images.profile.avatar}
                     alt="Gokul - Profile"
                     className="w-full h-full rounded-full object-cover"
                   />
@@ -663,7 +645,7 @@ const Portfolio = () => {
               My professional journey and qualifications
             </p>
             <Button asChild size="lg" className="group">
-              <a href="/Gokul's Resume.pdf" download>
+              <a href={Images.profile.resume} download>
                 <Download size={20} className="mr-2 group-hover:animate-bounce" />
                 Download PDF
               </a>
