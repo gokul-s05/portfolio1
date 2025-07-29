@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {title: 'Football Analytics Platform⚽',
       description: 'Built an AI platform leveraging ML and real-time data to analyze and predict football team performance.',
-      image: 'src/assets/football.jpg',
+      image: '/football.jpg',
       tech: ['Python', 'Streamlit', 'OpenCV', 'YOLOv8'],
       github: 'https://github.com/gokul-s05/football_analysis.git',
       demo: 'https://demo.com'
@@ -15,7 +15,7 @@ const Projects = () => {
     {
       title: 'virtual Mouse🖱️',
       description: 'Created a gesture-controlled virtual mouse using OpenCV for touchless cursor control via real-time hand tracking.',
-      image: 'src/assets/mouse.jpg',
+      image: '/mouse.jpg',
       tech: ['OpenCV', 'MediaPipe', 'Python','PyAutoGUI'],
       github: 'https://github.com/gokul-s05/virtual_mouse.git',
       
@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: 'Profile 360👤',
       description: 'Built an Android app in Java for managing member profiles with image support and intuitive user interface.',
-      image: 'src/assets/web.webp',
+      image: '/web.webp',
       tech: ['Java', 'XML', 'Java for API','Firebase'],
       github: 'https://github.com/gokul-s05/profile360.git',
       
@@ -31,7 +31,7 @@ const Projects = () => {
     {
       title: 'Cyber Security Tools🔒',
       description: 'Developed cybersecurity tools including Caesar cipher, pixel-based image encryption, keylogger, and password strength checker for enhanced data protection.',
-      image: 'src/assets/tools.webp',
+      image: '/tools.webp',
       tech: ['Python', 'Git','Tkinter'],
       github: 'https://github.com/gokul-s05/Intern_Project.git',
       demo: 'https://cyber-security-tools.streamlit.app/'
@@ -39,7 +39,7 @@ const Projects = () => {
     {
       title: 'Portfolio Website🌐',
       description: 'Modern portfolio website with smooth animations and responsive design.',
-      image: 'src/assets/portfolio.jpg',
+      image: '/portfolio.jpg',
       tech: ['React', 'Framer Motion', 'Tailwind CSS'],
       github: 'https://github.com/gokul-s05/portfolio.git',
       demo: 'https://gokul-s05.github.io/portfolio/'

@@ -401,7 +401,7 @@ const Portfolio = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <img
-                    src="/portfolio/images/gokul.jpg"
+                    src="/gokul.jpg"
                     alt="Gokul - Profile"
                     className="w-full h-full rounded-full object-cover"
                   />
