@@ -12,7 +12,7 @@ import { initEmailJS, EMAILJS_CONFIG } from '@/lib/emailjs';
 
 // Define image URLs
 const IMAGES = {
-  python: '/python.png',
+  python: 'public/python.png',
   java: '/java.png',
   machine: '/machine.png',
   html: '/html.png',
